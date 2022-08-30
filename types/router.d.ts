@@ -2,13 +2,14 @@ import Vue, {
   PluginFunction,
   AsyncComponent,
   VNode,
-  Component as _Component
+  Component as _Component, DefineComponent
 } from 'vue'
 
 type Component =
   | {}
   | _Component<any, any, any, any, any>
   | AsyncComponent<any, any, any, any>
+  | DefineComponent<any, any, any, any, any>
 
 type Dictionary<T> = { [key: string]: T }
 type ErrorHandler = (err: Error) => void
